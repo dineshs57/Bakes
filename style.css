@@ -5,14 +5,18 @@
     font-family: "Poppins", sans-serif;
 }
 
-/* Header */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ================= HEADER ================= */
+
 .header {
     text-align: center;
     background: #fff5f8;
     padding: 20px 0;
 }
 
-/* Logo */
 .logo {
     font-size: 2.8rem;
     color: #d63384;
@@ -24,6 +28,7 @@
     display: flex;
     justify-content: center;
     gap: 30px;
+    flex-wrap: wrap;
 }
 
 .navbar a {
@@ -37,7 +42,8 @@
     color: #d63384;
 }
 
-/* Hero Section */
+/* ================= HERO ================= */
+
 .hero {
     text-align: center;
     padding: 80px 20px;
@@ -49,17 +55,14 @@
     color: #fff;
 }
 
-.hero h2 {
+.hero h2,
+.hero p {
     color: #fff;
     margin-top: 10px;
 }
 
-.hero p {
-    color: #fff;
-    margin: 15px 0;
-}
-
-.hero button {
+.hero button,
+.order-btn {
     padding: 12px 30px;
     border: none;
     background: #d63384;
@@ -68,15 +71,19 @@
     border-radius: 30px;
     cursor: pointer;
     transition: transform 0.3s;
+    display: inline-block;
+    text-decoration: none;
 }
 
-.hero button:hover {
+.hero button:hover,
+.order-btn:hover {
     transform: scale(1.05);
 }
 
-/* Products */
+/* ================= PRODUCTS ================= */
+
 .products {
-    padding: 60px 40px;
+    padding: 60px 8%;
     text-align: center;
 }
 
@@ -85,7 +92,7 @@
     color: #d63384;
 }
 
-/* Product Grid */
+/* Grid */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -107,6 +114,8 @@
 
 .card img {
     width: 100%;
+    height: 220px;
+    object-fit: cover;
     border-radius: 12px;
 }
 
@@ -119,7 +128,8 @@
     font-weight: bold;
 }
 
-/* Footer */
+/* ================= FOOTER ================= */
+
 footer {
     text-align: center;
     padding: 20px;
@@ -127,21 +137,61 @@ footer {
     color: #777;
 }
 
-.order-btn {
-    display: inline-block;
-    padding: 12px 30px;
-    background: #d63384;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-size: 1rem;
-    transition: transform 0.3s;
+/* ================= TABLET ================= */
+
+@media (max-width: 992px) {
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .products {
+        padding: 50px 5%;
+    }
+
 }
 
-.order-btn:hover {
-    transform: scale(1.05);
-}
+/* ================= MOBILE ================= */
 
-html {
-    scroll-behavior: smooth;
+@media (max-width: 768px) {
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .products {
+        padding: 40px 5%;
+    }
+
+    .card img {
+        height: 200px;
+    }
+
+    .order-btn,
+    .hero button {
+        width: 100%;
+        max-width: 250px;
+    }
+
 }
