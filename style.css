@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    background: #fff5f8;
+    padding: 20px 0;
+}
+
+/* Logo */
+.logo {
+    font-size: 2.8rem;
+    color: #d63384;
+    margin-bottom: 12px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #d63384;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to right, #ffdde1, #ee9ca7);
+}
+
+.hero-title {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.hero h2 {
+    color: #fff;
+    margin-top: 10px;
+}
+
+.hero p {
+    color: #fff;
+    margin: 15px 0;
+}
+
+.hero button {
+    padding: 12px 30px;
+    border: none;
+    background: #d63384;
+    color: white;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.hero button:hover {
+    transform: scale(1.05);
+}
+
+/* Products */
+.products {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.products h2 {
+    margin-bottom: 40px;
+    color: #d63384;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+/* Cards */
+.card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.card h3 {
+    margin: 15px 0 5px;
+}
+
+.card p {
+    color: #d63384;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #fff5f8;
+    color: #777;
+}
+
+.order-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #d63384;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    transition: transform 0.3s;
+}
+
+.order-btn:hover {
+    transform: scale(1.05);
+}
+
+html {
+    scroll-behavior: smooth;
+}

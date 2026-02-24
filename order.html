@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Now | SugarRush</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="order.css">
+
+    <!-- EmailJS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("EooaXehMegpm8ZZq3");  // ← Replace this
+        })();
+
+        
+    </script>
+</head>
+<body>
+
+<header class="header">
+    <h1 class="logo">Sugar Symphony 🍰</h1>
+    <p>Place Your Sweet Order</p>
+</header>
+
+<section class="order-section">
+    <form class="order-form" id="orderForm">
+        <h2>Order Details</h2>
+
+        <label>Customer Name</label>
+        <input type="text" name="name" required>
+
+        <label>Phone Number</label>
+        <input type="tel" name="phone" required>
+
+   
+
+    <label>Select Item</label>
+<select name="item" id="itemSelect" required>
+    <option value="">-- Choose Item --</option>
+    <option>Black Forest Cake</option>
+    <option>Blueberry Cake</option>
+    <option>Coffee Cake</option>
+    <option>Fruit Cake</option>
+    <option>Hazel Nut Cake</option>
+    <option>Mango Cake</option>
+    <option>Oreo Cake</option>
+    <option>Plum Cake</option>
+    <option>White Forest Cake</option>
+    <option>Strawberry Cake</option>
+    <option>Chocolate Cake</option>
+    <option>Red Velvet Cake</option>
+</select>
+
+
+       
+        
+        <label>Quantity</label>
+        <input type="number" name="quantity" min="1" value="1" required>
+
+        <label>Delivery Address</label>
+        <textarea name="address" required></textarea>
+
+        <button type="submit">Place Order 🍩</button>
+
+        <a href="index.html" class="back">← Back to Home</a>
+    </form>
+</section>
+
+<script>
+document.getElementById("orderForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm(
+        "service_9hqe6fn",          // Your Service ID
+        "template_u03awik",         // Your Template ID
+        this,
+        "EooaXehMegpm8ZZq3"           // Your Public Key from Account
+    )
+    .then(function(response) {
+        alert("🎉 Order Sent Successfully!");
+        document.getElementById("orderForm").reset();
+        console.log("SUCCESS", response);
+    })
+    .catch(function(error) {
+        console.log("ERROR DETAILS:", error);
+        alert("Error ❌ Check console");
+    });
+});
+</script>
+
+
+
+</body>
+</html>
